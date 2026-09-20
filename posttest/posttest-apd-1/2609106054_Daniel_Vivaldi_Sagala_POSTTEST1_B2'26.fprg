@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="POSTTEST 1 APD"/>
+        <attribute name="authors" value="vario"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-14 02:18:12 PM"/>
+        <attribute name="created" value="dmFyaW87VkFSSU87MjAyNi0wOS0xNDsxMjo1NzoxNCBQTTsyMjE4"/>
+        <attribute name="edited" value="dmFyaW87VkFSSU87MjAyNi0wOS0xNDswMjoxODoxMiBQTTsxOzIzMjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="levelKepedasan, hargaMie, hargaTotal, uangPembayaran, uangKembalian" type="Integer" array="False" size=""/>
+            <declare name="namaPelanggan" type="String" array="False" size=""/>
+            <output expression="&quot;masukkan nama pelanggan:&quot;" newline="True"/>
+            <input variable="namaPelanggan"/>
+            <output expression="&quot;masukkan level kepedasan&quot;" newline="True"/>
+            <input variable="levelKepedasan"/>
+            <while expression="levelKepedasan &gt; 5">
+                <output expression="&quot;masukkan nilai kepedasan dari 1-5&quot;" newline="True"/>
+                <input variable="levelKepedasan"/>
+            </while>
+            <if expression="levelKepedasan &gt;= 4">
+                <then>
+                    <assign variable="hargaMie" expression="20000 + 6000"/>
+                </then>
+                <else>
+                    <if expression="levelKepedasan &gt;=2">
+                        <then>
+                            <assign variable="hargaMie" expression="20000 + 4000"/>
+                        </then>
+                        <else>
+                            <assign variable="hargaMie" expression="20000"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="hargaTotal" expression="hargaMie + (hargaMie * 0.10)"/>
+            <output expression="&quot;nama: &quot; &amp; namaPelanggan" newline="True"/>
+            <output expression="&quot;level: &quot; &amp; levelKepedasan" newline="True"/>
+            <output expression="&quot;harga sebelum pajak: &quot; &amp; hargaMie" newline="True"/>
+            <output expression="&quot;total harga: &quot; &amp; hargaTotal" newline="True"/>
+            <output expression="&quot;masukkan uang pembayaran&quot;" newline="True"/>
+            <input variable="uangPembayaran"/>
+            <while expression="uangPembayaran &lt; hargaTotal">
+                <output expression="&quot;uang tidak mencukupi, tolong masukkan nominal yang sesuai&quot;" newline="True"/>
+                <input variable="uangPembayaran"/>
+            </while>
+            <assign variable="uangKembalian" expression="uangPembayaran - hargaTotal"/>
+            <output expression="&quot;kembalian anda: &quot; &amp; uangKembalian" newline="True"/>
+            <output expression="&quot;Selamat menikmati Mie GaCuan, semoga cuan mu bertambah :)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
