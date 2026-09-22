@@ -1,83 +1,36 @@
-nama = "rendy"
+skincare_1 = 35000
+skincare_2 = 42000
+skincare_3 = 50000
+skincare_4 = 55000
+skincare_5 = 68000
+skincare_6 = 70000
 
-print(nama)
+harga_skincare = [skincare_1, skincare_2, skincare_3, skincare_4, skincare_5, skincare_6]
 
-nama_panjang = "Ahmad Rafi"
+ongkos_kirim = 12000
+total_pengeluaran = ongkos_kirim + skincare_1 + skincare_2 + skincare_3 + skincare_4 + skincare_5 + skincare_6
 
-print(nama_panjang)
+rata_rata = total_pengeluaran / len(harga_skincare)
 
-a = 10
-b = 5
-c = a + b
+nim = 54
 
-print(c)
+konversi_JPY = total_pengeluaran / 113
 
-float1 = 1.53
-float2 = 7.2
-hasil = float1 + float2
+isi_skincare_3_sampai_5 = harga_skincare[-4:-1]
 
-print(hasil)
+bolean = nim < rata_rata
 
-print('''halo saya sgma
-dan saya''')
-
-nama = "Rafi "
-hobi = "Mancing"
-
-print(nama + hobi)
-
-teks = "Rahmat Flowchart"
-
-#menampilkan index ke-3
-print(teks[3])
-#menampilkan index ke-3 hingga ke-6
-print(teks[3:6])
-#menampilkan seluruhnya, tetapi dimulai dari index ke-7
-print(teks[7:])
-#menampilkan hanya sampai index ke-6
-print(teks[:6])
-
-Hujan = False
-Panas = True
-
-print(Hujan)
-
-data = ["APD", 10, True]
-print(data[0])
-print(data[1:3])
-
-data_mahasiswa = ("Rafi","034",True, 3.5)
-print(data_mahasiswa[0])
-print(data_mahasiswa[2])
-
-angka = {1, 2, 2, 2, 2, 3, 4, 4, 5}
-print(angka)
-
-mahasiswa = {
-'nim' : '91827981237',
-'nama' : 'haikal',
-'ipk' : 3.78
-}
-...
-# Mengakses Value dalam Dictionary
-print(mahasiswa['nim'])
-print(mahasiswa['nama'])
-print(mahasiswa['ipk'])
-
-angka2 = 10
-print(type(angka2))
-angka2 = str(angka2)
-print(type(angka2))
-
-#nama = input("Masukkan Nama: ")
-#print(nama)
-
-a = 5
-a += 1
-print(a)
-
-a = True
-b = False
-c = a or b
-
-print(c)
+print("skincare_1 =", skincare_1)
+print("skincare_2 =", skincare_2)
+print("skincare_3 =", skincare_3)
+print("skincare_4 =", skincare_4)
+print("skincare_5 =", skincare_5)
+print("skincare_6 =", skincare_6)
+print("harga skincare =", harga_skincare)
+print("ongkos kirim =", ongkos_kirim)
+print("total pengeluaran =", total_pengeluaran)
+print("rata-rata =", rata_rata)
+print("nim =", nim)
+print("bolean =", bolean)
+print("total pengeluaran dalam mata uang Yen Jepang =", konversi_JPY)
+print("harga skincare 3 sampai skincare 5=", isi_skincare_3_sampai_5)
